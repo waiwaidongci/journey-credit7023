@@ -1,0 +1,1 @@
+export const number=(n:number|undefined,d=2)=>n===undefined?'—':n.toLocaleString('zh-CN',{maximumFractionDigits:d,minimumFractionDigits:d});export const percent=(n:number|undefined)=>n===undefined?'—':number(n*100,1)+'%';export const money=(n:number|undefined)=>'¥ '+number(n);export const time=(s:string)=>new Date(s).toLocaleString('zh-CN',{hour12:false});

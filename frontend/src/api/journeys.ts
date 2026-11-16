@@ -1,0 +1,1 @@
+import {request} from './client';import {Journey} from '../types/domain';export const getJourneys=(id:number)=>request<Journey[]>(`/batches/${id}/journeys`);export const annotateJourney=(id:number,note:string)=>request<Journey>(`/journeys/${id}`,{method:'PATCH',body:JSON.stringify({note})});
