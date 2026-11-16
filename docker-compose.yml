@@ -19,6 +19,10 @@ services:
       REDIS_URL: redis://redis:6379/0
       JWT_SECRET: ${JWT_SECRET:-local-demo-journey-credit-change-this-key}
       SEED_DEMO: ${SEED_DEMO:-true}
+      ATTRIBUTION_MAX_CHANNELS: ${ATTRIBUTION_MAX_CHANNELS:-2000}
+      ATTRIBUTION_MAX_EDGES: ${ATTRIBUTION_MAX_EDGES:-20000}
+      ATTRIBUTION_TIME_LIMIT_S: ${ATTRIBUTION_TIME_LIMIT_S:-120}
+      ATTRIBUTION_MEMORY_LIMIT_MIB: ${ATTRIBUTION_MEMORY_LIMIT_MIB:-512}
     ports: ["${BACKEND_PORT:-19216}:8000"]
     volumes: ["artifacts:/artifacts"]
     depends_on:
